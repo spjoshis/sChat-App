@@ -24,12 +24,7 @@ var numUsers = 0, chatUsers = {};
 io.on('connection', function (socket) {
 	var addedUser = false;
 
-	// Private
-	// connections.push(socket);
-
 	socket.on('new message', function (data) {
-		console.log(data.room);
-		// socket.broadcast.emit('new message', {
 		socket.broadcast.to(data.room).emit('new message', {
 			username: socket.username,
 			message: data.message

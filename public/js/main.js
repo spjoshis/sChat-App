@@ -70,11 +70,9 @@ $(function() {
   // Sends a chat message
   function sendMessage () {
     var message = $inputMessage.val();
-console.log(roomId);
 
     // Prevent markup from being injected into the message
     message = cleanInput(message);
-console.log(roomId);
     
     // if there is a non-empty message and a socket connection
     if (message && connected) {
@@ -84,13 +82,10 @@ console.log(roomId);
         message: message,
         isUser: true
       });
-console.log('1');
 
-      // tell server to execute 'new message' and send along one parameter
+      // Tell server to execute 'new message' and send along one parameter
       socket.emit('new message', {room: roomId, message: message});
     }
-console.log('2');
-
   }
 
   // Log a message

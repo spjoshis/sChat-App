@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Chat Example</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <ul class="pages">
+    <li class="chat page" style="width: 80%; display: block !important;">
+      <div class="chatArea">
+        <ul class="messages"></ul>
+      </div>
+      <input class="inputMessage" placeholder="Type here..."/>
+    </li>
+    <li class="chatUsers" style="width: 20%; position: relative; float: right;">
+        <ul>
+            <li>No Users</li>
+        </ul>
+    </li>
+    <!-- <li class="login page">
+      <div class="form">
+        <h3 class="title">What's your nickname?</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
+      </div>
+    </li> -->
+    <input class="usernameInput" type="hidden" value="Sameer" />
+  </ul>
+
+  <script>
+        var roomId = 19203910239928483765;
+  </script>
+
+  <script src="/js/jquery-2.2.4.min.js"></script>
+  <script src="/js/socket.io.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+        
+  </script>
+</body>
+</html>
